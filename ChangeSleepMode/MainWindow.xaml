@@ -276,7 +276,7 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
                     Content="Сохранить"
-                    FontSize="18" />
+                    FontSize="18" Click="BtnSave_Click" />
             </Grid>
         </Grid>
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows;
 
@@ -96,6 +97,61 @@ namespace ChangeSleepMode
             CbDisplayFromPower.SelectedIndex = 4;
             CbSleepFromBattery.SelectedIndex = 5;
             CbSleepFromPower.SelectedIndex = 8;
+        }
+
+        private void BtnSave_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                ProcessCmd();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                ProcessPowerShell();
+            }
+        }
+
+        private void ProcessCmd()
+        {
+            string[] allVariants = new string[4]
+            {
+                $"/c powercfg /change monitor-timeout-ac {Times[CbDisplayFromPower.SelectedIndex]}",
+                $"/c powercfg /change monitor-timeout-dc {Times[CbDisplayFromBattery.SelectedIndex]}",
+                $"/c powercfg /change standby-timeout-ac {Times[CbSleepFromPower.SelectedIndex]}",
+                $"/c powercfg /change standby-timeout-dc {Times[CbSleepFromBattery.SelectedIndex]}"
+            };
+
+            for (int i = 0; i < allVariants.Length; i++)
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = "cmd",
+                    Arguments = allVariants[i],
+                    WindowStyle = ProcessWindowStyle.Hidden
+                });
+            }
+        }
+
+        private void ProcessPowerShell()
+        {
+            string[] allVariants = new string[4]
+            {
+                $"/command powercfg /change monitor-timeout-ac {Times[CbDisplayFromPower.SelectedIndex]}",
+                $"/command powercfg /change monitor-timeout-dc {Times[CbDisplayFromBattery.SelectedIndex]}",
+                $"/command powercfg /change standby-timeout-ac {Times[CbSleepFromPower.SelectedIndex]}",
+                $"/command powercfg /change standby-timeout-dc {Times[CbSleepFromBattery.SelectedIndex]}"
+            };
+
+            for (int i = 0; i < allVariants.Length; i++)
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = "powershell",
+                    Arguments = allVariants[i],
+                    WindowStyle = ProcessWindowStyle.Hidden
+                });
+            }
         }
     }
 
