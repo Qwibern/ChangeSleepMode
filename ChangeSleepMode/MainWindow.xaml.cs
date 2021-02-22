@@ -89,6 +89,14 @@ namespace ChangeSleepMode
                 }
             }
         }
+
+        private void BtnDefault_Click(object sender, RoutedEventArgs e)
+        {
+            CbDisplayFromBattery.SelectedIndex = 3;
+            CbDisplayFromPower.SelectedIndex = 4;
+            CbSleepFromBattery.SelectedIndex = 5;
+            CbSleepFromPower.SelectedIndex = 8;
+        }
     }
 
     //-----------------------------------------------------------------------------------------

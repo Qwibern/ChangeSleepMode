@@ -60,7 +60,7 @@
                     Padding="3"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    Content="По умолчанию" />
+                    Content="По умолчанию" Click="BtnDefault_Click" />
                 <Grid
                     x:Name="GridDc"
                     Grid.Column="1"
