@@ -91,6 +91,8 @@ namespace ChangeSleepMode
             }
         }
 
+
+        // Устанавливает значение Combobox'ов по умолчанию
         private void BtnDefault_Click(object sender, RoutedEventArgs e)
         {
             CbDisplayFromBattery.SelectedIndex = 3;
@@ -99,7 +101,7 @@ namespace ChangeSleepMode
             CbSleepFromPower.SelectedIndex = 8;
         }
 
-        private void BtnSave_Click(object sender, RoutedEventArgs e)
+        void BtnSave_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -112,6 +114,7 @@ namespace ChangeSleepMode
             }
         }
 
+        // Сохраняет текущие изменения через Cmd
         private void ProcessCmd()
         {
             string[] allVariants = new string[4]
@@ -133,6 +136,7 @@ namespace ChangeSleepMode
             }
         }
 
+        // Сохраняет текущие изменения через PowerShell
         private void ProcessPowerShell()
         {
             string[] allVariants = new string[4]

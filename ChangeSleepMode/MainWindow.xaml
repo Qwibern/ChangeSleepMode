@@ -268,7 +268,7 @@
                     HorizontalContentAlignment="Center"
                     VerticalContentAlignment="Center"
                     Content="Сохранить до перезагрузки"
-                    FontSize="16" />
+                    FontSize="16" ToolTip="Не работает! Не реализовано!" />
                 <Button
                     x:Name="BtnSave"
                     Width="200"
