@@ -14,7 +14,7 @@
     ResizeMode="CanMinimize"
     ScrollViewer.VerticalScrollBarVisibility="Disabled"
     WindowStartupLocation="CenterScreen"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Loaded="Window_Loaded">
     <Grid x:Name="MainGrid">
         <Grid
             x:Name="GridScheme"
