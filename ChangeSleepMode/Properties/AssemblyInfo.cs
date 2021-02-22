@@ -7,8 +7,8 @@ using System.Windows;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набор атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("ChangeSleepMode")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Change Sleep Mode")]
+[assembly: AssemblyDescription("Программа для управления режимом сна в Windows")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ChangeSleepMode")]
