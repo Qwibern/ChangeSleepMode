@@ -5,7 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChangeSleepMode"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Change Sleep Mode"
+        Width="500"
+        Height="500"
+        MinWidth="500"
+        MinHeight="500"
+        FontSize="14"
+        ScrollViewer.VerticalScrollBarVisibility="Disabled"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         
     </Grid>
